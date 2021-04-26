@@ -27,6 +27,7 @@ export default class Book extends React.Component {
     }
 
 
+
     editBook(id) {
         window.localStorage.setItem("id", id);
         this.props.history.push('/Book/BookUpdate');
