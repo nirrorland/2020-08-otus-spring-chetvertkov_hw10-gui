@@ -9,9 +9,8 @@ import Author from "./modules/Author";
 import Genre from "./modules/Genre";
 import BookAdd from "./modules/BookAdd";
 import BookUpdate from "./modules/BookUpdate";
+import Login from "./modules/Login";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 
 ReactDOM.render(
     <BrowserRouter>
@@ -22,6 +21,8 @@ ReactDOM.render(
 			<Route exact path="/Book/Add" component={BookAdd} />
             <Route exact path="/Author" component={Author} />
             <Route exact path="/Genre" component={Genre} />
+			<Route exact path="/Login" component={Login} />
+
         </Switch>
     </BrowserRouter>,
     document.getElementById('root')
