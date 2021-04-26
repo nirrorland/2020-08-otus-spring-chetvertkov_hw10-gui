@@ -12,10 +12,7 @@ const instance = axios.create()
 //on successful response
 instance.interceptors.response.use(
 	response=>{
-		if (response.status === 302) {
-			window.location.href = "http://localhost:8082/login"; 
-		}
-		
+				
 		//console.log(response)
 		return response;
 	},
@@ -30,12 +27,6 @@ instance.interceptors.response.use(
 
 export default new class ApiRouter {
 	
-	//fetchAllBooks() {
-		
-//		return axios.get(BOOK_URL);   
-		
-  //  }
-
     fetchAllBooks() {
         return fetch(BOOK_URL).then((response) => {
 			 console.log('error: ' + response.status);
